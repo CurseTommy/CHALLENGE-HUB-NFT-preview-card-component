@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--soft-blue);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-BG);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    background-color: var(--card-BG);
+    border-radius: 1rem;
+    padding: 24px;
+    max-width: 18%;
+    height: 60%;
+    display: grid;
+}
+
+div.line {
+    display: flex;
+    align-items: flex-end;
+    height: 20px;
+    width: 100%;
+}
+
+div.line_inner {
+    width: 100%;
+    height: 1px;
+    background-color: var(--line);
+}
+
+div.price_time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p,
+span {
+    font-size: 18px;
+}
+
+p.name {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+p.description,
+p.date,
+p.creator {
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+p.price {
+    color: var(--cyan);
+    font-weight: 400;
+}
+
+span {
+    color: var(--white);
+}
+
+img.crypto_image {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+img.creator_image {
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    line-height: 12%;
+    width: 40px;
+}
+
+div.creator_section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        max-width: 40%;
+        gap: 10px;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    section {
+        max-width: 90%;
+        gap: 10px;
+        height: 70%;
+    }
+}
